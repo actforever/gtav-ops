@@ -36,9 +36,10 @@ public class Main {
         /* 主窗口启动 */
         @Override
         public void onFXStart() throws Exception {
-            Class.forName(PlatformFocusMonitor.class.getName());  /* 平台焦点监听 */
+//            Class.forName(PlatformFocusMonitor.class.getName());  /* 平台焦点监听 */
 
-            PlatformFocusMonitor.addListener(MacroRegistry.getInstance());  /* 添加监听器 */
+//            PlatformFocusMonitor.addListener(MacroRegistry.getInstance());  /* 添加监听器 */
+            MacroRegistry.getInstance().resumeAll();  /* 直接调起所有特性 */
 
             Class.forName(ActionTaskManager.class.getName());  /* 宏任务调度 */
 
